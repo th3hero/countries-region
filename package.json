@@ -1,6 +1,6 @@
 {
   "name": "countries-region",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A comprehensive library for countries and regions data with TypeScript support",
   "keywords": [
     "countries-region",

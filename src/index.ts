@@ -96,6 +96,16 @@ export function regionBySlug(slug: string): Region | undefined {
     return regions.find(region => region.slug === regionSlug);
 }
 
+/**
+ * Search regions by its name
+ * @param query - The slug of the region
+ * @returns The array of regions that match the search query
+ */
+export function regionsByName(query: string): Region[] {
+    const name = query.toLowerCase();
+    return regions.filter(region => region.name.toLowerCase().includes(name));
+}
+
 // Export types and data for advanced usage
 export {Country, Region};
 export {countries, regions};

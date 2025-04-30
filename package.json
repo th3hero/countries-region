@@ -1,0 +1,57 @@
+{
+  "name": "countries-region",
+  "version": "1.0.0",
+  "description": "A comprehensive library for countries and regions data with TypeScript support",
+  "keywords": [
+    "countries-region",
+    "countries",
+    "regions",
+    "country-list",
+    "region-list",
+    "typescript"
+  ],
+  "homepage": "https://github.com/th3hero/countries-region#readme",
+  "bugs": {
+    "url": "https://github.com/th3hero/countries-region/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/th3hero/countries-region.git"
+  },
+  "license": "MIT",
+  "author": "['Alok Kumar', 'Arjun Puri']",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:clean": "rimraf dist",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.3",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.8.3"
+  }
+}

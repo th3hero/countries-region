@@ -21,7 +21,7 @@ export type Airport = {
     name: string;
     city: string;
     country: string;
-    iata: string;
+    iata: string | null;
     icao: string;
     latitude: number;
     longitude: number;

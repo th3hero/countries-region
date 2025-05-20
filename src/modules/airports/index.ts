@@ -11,9 +11,14 @@ export function getAirports(): Promise<Airport[]> {
             .on("error", reject)
             .pipe(csvParser({ separator: "," }))
             .on("error", reject)
-            .on("data", (data: Airport) => {
+            .on("data", (data: any) => {
                 if (data.type === "airport") {
-                    airports.push(data);
+                    airports.push({
+                        ...data,
+                        latitude: parseFloat(data.latitude),
+                        longitude: parseFloat(data.longitude),
+                        altitude: parseFloat(data.altitude),
+                    } as Airport);
                 }
             })
             .on("end", () => resolve(airports));

@@ -29,6 +29,6 @@ export type Airport = {
     timezone: string;
     dst: string;
     tz: string;
-    type: string;
-    source: string;
+    type: 'airport' | 'station' | 'port' | 'unknown';
+    source: 'OurAirports' | 'Legacy' | 'User';
 }

@@ -2,7 +2,7 @@ import {Country, Region} from './types';
 import {countries} from './data/countries';
 import {regions} from './data/regions';
 import {getAirports} from './modules/airports';
-import type {Airport} from './modules/airports/types';
+import type {Airport} from './modules/airports';
 
 /**
  * Get all countries

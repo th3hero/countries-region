@@ -1,6 +1,6 @@
 {
   "name": "countries-region",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A comprehensive library for countries and regions data with TypeScript support",
   "keywords": [
     "countries-region",
@@ -8,7 +8,8 @@
     "regions",
     "country-list",
     "region-list",
-    "typescript"
+    "typescript",
+    "airports"
   ],
   "homepage": "https://github.com/th3hero/countries-region#readme",
   "bugs": {

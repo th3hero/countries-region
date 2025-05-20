@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 import csvParser from "csv-parser";
 import type { Airport } from "./types";
 
@@ -6,7 +7,7 @@ export function getAirports(): Promise<Airport[]> {
     const airports: Airport[] = [];
 
     return new Promise((resolve, reject) => {
-        fs.createReadStream(__dirname + "/data.csv")
+        fs.createReadStream(path.join(__dirname, "data.csv"))
             .on("error", reject)
             .pipe(csvParser({ separator: "," }))
             .on("error", reject)

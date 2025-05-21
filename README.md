@@ -155,6 +155,44 @@ Finds a region by its slug.
 const region = regionBySlug('europe');
 ```
 
+### Airports
+
+#### `getAirports()`
+
+Returns a Promise that resolves to an array of all airports. Each airport object contains detailed information including:
+- Airport name and city
+- Country location
+- IATA and ICAO codes
+- Geographic coordinates (latitude, longitude, altitude)
+- Timezone information
+- Type and source of data
+
+```javascript
+import { getAirports } from 'countries-region';
+
+// Get all airports
+const airports = await getAirports();
+console.log(airports);
+
+// Example airport object
+{
+    id: "1",
+    name: "Goroka Airport",
+    city: "Goroka",
+    country: "Papua New Guinea",
+    iata: "GKA",
+    icao: "AYGA",
+    latitude: -6.081689834590001,
+    longitude: 145.391998291,
+    altitude: 5282,
+    timezone: "10",
+    dst: "U",
+    tz: "Pacific/Port_Moresby",
+    type: "airport",
+    source: "OurAirports"
+}
+```
+
 ### Direct Exports
 
 The package also exports the types and data directly for advanced usage:

@@ -35,7 +35,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build": "node api.js && npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:types",
     "build:clean": "rimraf dist",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
